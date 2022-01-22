@@ -16,7 +16,6 @@
 <style lang=scss>
 div {
     display: flex;
-    column-gap: calc(var(--theme-font-size)*2);
     align-items: center;
     justify-content: space-around;
 }
