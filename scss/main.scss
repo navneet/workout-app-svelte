@@ -1,0 +1,128 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import 'themes';
+@import 'fonts';
+
+
+* {@include border-box}
+
+/* FONTS */
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: theme-var($--theme-font-size);
+    line-height: normal;
+}
+
+h1, h2 {
+    font-family: 'SEIN BLUE', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: calc(theme-var($--theme-font-size) * 2)
+}
+
+h2 {font-size: calc(theme-var($--theme-font-size) * 1.8);}
+
+h3 {
+    font-weight: 700;
+    font-size: calc(theme-var($--theme-font-size) * 1.6);
+}
+
+h4 {
+    font-weight: 500;
+    font-size: calc(theme-var($--theme-font-size) * 1.4);
+}
+
+h5 {
+    font-weight: 300;
+    font-size: calc(theme-var($--theme-font-size) * 1.2);
+}
+
+h6 {
+    font-weight: 250;
+    font-size: calc(theme-var($--theme-font-size) * 1.1);
+}
+
+a {
+    text-decoration: none;
+    &:any-link {text-decoration: none}
+}
+
+/* Form Input resets */
+button select input {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    &:hover {outline: 0}
+    &:focus {outline: 0}
+}
+
+button, select {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:disabled {
+    cursor:not-allowed;
+}
+
+/* Colors */
+body {
+    --theme-text: rgb(5, 5, 5);
+    color: var(--theme-text);
+    background-color: theme-var($--theme-background);
+    &.PREP {
+        background: -webkit-linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    }
+
+    &.WORK {
+        --theme-text: whitesmoke;
+        --theme-link-color: whitesmoke;
+        background: -webkit-linear-gradient(to right, rgb(235, 51, 73), rgb(244, 92, 67));
+        background: linear-gradient(to right, rgb(235, 51, 73), rgb(244, 92, 67));
+    }
+
+    &.REST {
+        background: -webkit-linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+        background: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+    }
+
+    &.BREAK {
+        background: -webkit-linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+        background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    }
+}
+
+a {
+    color: theme-var($--theme-link-color);
+    &:any-link {
+        color: theme-var($--theme-link-color);
+    }
+}
+
+button select input {
+    color: theme-var($--theme-text);
+}
+
+button {
+    &:disabled {
+        opacity: .5;
+    }
+}
+
+/*Layout*/
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: calc(theme-var($--theme-font-size) * 1.1);
+}
+
+/**Custom Convinience Classes */
+.hide {display: none !important}
+.off {visibility: hidden !important}
+.center {align-self: center !important}

@@ -1,0 +1,21 @@
+{
+  "name": "web-app",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "$PWD/build.sh",
+    "deploy": "$PWD/deploy.sh",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "sass": "sass --watch --no-source-map $PWD/scss/main.scss:$PWD/static/css/main.min.css"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "svelte": "^3.44.0",
+    "@sveltejs/adapter-static": "^1.0.0-next.26",
+    "sass": "^1.45.2",
+    "svelte-preprocess": "^4.10.2"
+  },
+  "type": "module"
+}

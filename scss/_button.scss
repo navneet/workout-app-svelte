@@ -1,0 +1,36 @@
+$active-shadow: 0 calc(var(--theme-icon-size)*1.18) calc(var(--theme-icon-size)*2.45) calc((var(--theme-icon-size)*.45)*-1) rgb(50 50 93 / 25%) inset,
+                0 calc(var(--theme-icon-size)*.72) calc(var(--theme-icon-size)*1.45) calc((var(--theme-icon-size)*.72)*-1) rgb(0 0 0 / 30%) inset,
+                0 calc((var(--theme-icon-size)*.54)*-1) calc(var(--theme-icon-size)*1.45) calc((var(--theme-icon-size)*.54)*-1) rgb(0 0 0 / 3%) inset;
+
+@mixin shadow-button {
+    color: var(--theme-font-text);
+    background-color: transparent;
+
+    font-size: calc(var(--theme-font-size) * 0.95);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    //vertical-align: middle;
+    padding: calc(var(--theme-font-size) * 1.5);
+
+    border: 0 none transparent;
+    border-radius: calc(var(--theme-font-size) * .25);
+    box-shadow: 0 calc(var(--theme-icon-size)*1.18) calc(var(--theme-icon-size)*2.45) calc((var(--theme-icon-size)*.45)*-1) rgb(50 50 93 / 25%),
+                0 calc(var(--theme-icon-size)*.72) calc(var(--theme-icon-size)*1.45) calc((var(--theme-icon-size)*.72)*-1) rgb(0 0 0 / 30%),
+                0 calc((var(--theme-icon-size)*.54)*-1) calc(var(--theme-icon-size)*1.45) calc((var(--theme-icon-size)*.54)*-1) rgb(0 0 0 / 3%);
+
+    &:hover {
+        box-shadow: calc(var(--theme-icon-size)*.05) calc(var(--theme-icon-size)*.05) calc(var(--theme-icon-size)*.5) calc(var(--theme-icon-size)*.15) rgb(50 50 93 / 25%) inset,
+                    calc((var(--theme-icon-size)*.05)*-1) calc((var(--theme-icon-size)*.05)*-1) calc(var(--theme-icon-size)*.75) calc(var(--theme-icon-size)*.15) rgb(50 50 93 / 25%);
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:active {
+        outline: 0;
+        box-shadow: $active-shadow;
+    }
+}

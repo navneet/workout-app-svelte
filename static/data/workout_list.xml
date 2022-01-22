@@ -1,0 +1,416 @@
+<?xml version='1.0' standalone='yes' ?>
+<workout>
+	<exercises>
+		<chest>
+			<exercise name="Single Arm Press" target="Chest" has_lr="1" band_pos="2" />
+			<exercise name="Chest Press" target="Chest" has_lr="0" band_pos="2" />
+			<exercise name="Neutral Grip Chest Press" target="Chest" has_lr="0" band_pos="2" />
+			<exercise name="Alternating Chest Press" target="Chest" has_lr="0" band_pos="2" />
+			<exercise name="Chest Fly" target="Chest" has_lr="0" band_pos="2" />
+			<exercise name="Cross Body Chest Press" target="Inner Chest" has_lr="1" band_pos="2" />
+			<exercise name="Alternating Chest Fly" target="Chest" has_lr="0" band_pos="2" />
+			<exercise name="Lying Single Arm Chest Fly" target="Chest" has_lr="1" band_pos="1" />
+			<exercise name="Pushups" target="Chest" has_lr="0" band_pos="7" />
+			<exercise name="Single-Leg Pushups" target="Chest" has_lr="0" band_pos="7" />
+			<exercise name="Wide Pushups" target="Chest/Shoulders" has_lr="0" band_pos="7" />
+			<exercise name="Typewriter Pushups" target="Chest/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Archer Pushups" target="Chest" has_lr="0" band_pos="0" />
+			<exercise name="Elevated/Deep Pushups" target="Chest" has_lr="0" band_pos="7" />
+			<exercise name="Fingertip Pushups" target="Chest/Wrists" has_lr="0" band_pos="0" />
+			<exercise name="Knuckle Pushups" target="Chest/Wrists" has_lr="0" band_pos="0" />
+			<exercise name="Pseudo Pushups" target="Chest/Triceps" has_lr="0" band_pos="0" />
+			<exercise name="Inner Pec Pushups" target="Chest/Wrists" has_lr="1" band_pos="1" />
+			<exercise name="Brock Shuffle Pushups" target="Chest/Wrists" has_lr="0" band_pos="0" />
+			<exercise name="Spiderman Pushups" target="Chest/Glutes" has_lr="0" band_pos="7" />
+			<exercise name="Superman Pushups" target="Chest/Glutes" has_lr="0" band_pos="0" />
+			<exercise name="One Hand Pushups" target="Shoulders/Chest/Triceps/Core" has_lr="1" band_pos="0" />
+			<exercise name="Downward Dog to Pushup" target="Upper Body/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Power Pushups" target="Chest" has_lr="0" band_pos="0" />
+			<exercise name="45° Power Pushups" target="Chest" has_lr="0" band_pos="7" />
+			<exercise name="Clap Pushups" target="Chest" has_lr="0" band_pos="0" />
+			<exercise name="Diamond Pushups" target="Triceps/Chest" has_lr="0" band_pos="7" />
+			<exercise name="Tuck Pushups" target="Chest/Hip Flexors" has_lr="0" band_pos="0" />
+			<exercise name="Mountain Climbers to Pushups" target="Chest/Legs/Abs" has_lr="0" band_pos="1" />
+			<exercise name="Wall High Plank Pushups" target="Chest/Abs" has_lr="0" band_pos="0" />
+		</chest>
+
+		<upper_chest>
+			<exercise name="Single Arm Press" target="Upper Chest" has_lr="1" band_pos="1" />
+			<exercise name="Chest Press" target="Upper Chest" has_lr="0" band_pos="1" />
+			<exercise name="Alternating Chest Press" target="Upper Chest" has_lr="0" band_pos="1" />
+			<exercise name="Chest Fly" target="Upper Chest" has_lr="0" band_pos="1" />
+			<exercise name="Alternating Chest Fly" target="Upper Chest" has_lr="0" band_pos="1" />
+		</upper_chest>
+
+		<lower_chest>
+			<exercise name="Single Arm Press" target="Lower Chest" has_lr="1" band_pos="3" />
+			<exercise name="Chest Press" target="Lower Chest" has_lr="0" band_pos="3" />
+			<exercise name="Alternating Chest Press" target="Lower Chest" has_lr="0" band_pos="3" />
+			<exercise name="Chest Fly" target="Lower Chest" has_lr="0" band_pos="3" />
+			<exercise name="Alternating Chest Fly" target="Lower Chest" has_lr="0" band_pos="3" />
+		</lower_chest>
+
+		<biceps>
+			<exercise name="45° Curl" target="Biceps/Long Head" has_lr="0" band_pos="1" />
+			<exercise name="Drag Curl" target="Biceps/Long Head" has_lr="0" band_pos="4" />
+			<exercise name="Close Grip Curl" target="Biceps/Long Head" has_lr="0" band_pos="4" />
+			<exercise name="Horizontal Curl" target="Biceps/Short Head" has_lr="0" band_pos="2" />
+			<exercise name="Single Arm Hercules" target="Biceps" has_lr="1" band_pos="2" />
+			<exercise name="Hammer Curl" target="Biceps/Brachialis" has_lr="0" band_pos="4" />
+			<exercise name="Chest Tap Curl" target="Biceps" has_lr="0" band_pos="2" />
+			<exercise name="Cross Chest Bicep Curl" target="Biceps" has_lr="0" band_pos="2" />
+			<exercise name="Cross Body Curl" target="Biceps/Long Head" has_lr="0" band_pos="4" />
+			<exercise name="Wide Grip Curl" target="Biceps/Short Head" has_lr="0" band_pos="4" />
+			<exercise name="Reverse Grip Curl" target="Biceps/Brachialis" has_lr="0" band_pos="4" />
+			<exercise name="21s" target="Biceps" has_lr="0" band_pos="4" />
+			<exercise name="Kneeling Preacher Curl" target="Biceps/Short Head" has_lr="0" band_pos="1" />
+			<exercise name="Standard Curl" target="Biceps" has_lr="0" band_pos="1" />
+			<exercise name="Standard Curl" target="Biceps" has_lr="0" band_pos="4" />
+			<exercise name="Front Plank Bicep Curl" target="Biceps/Abs" has_lr="1" band_pos="1" />
+		</biceps>
+
+		<triceps>
+			<exercise name="Pressdowns" target="Triceps" has_lr="0" band_pos="3" />
+			<exercise name="Single Arm Tricep Extensions" target="Triceps/Long Head" has_lr="1" band_pos="1" />
+			<exercise name="Single Arm Tricep Extensions" target="Triceps/Long Head" has_lr="1" band_pos="4" />
+			<exercise name="Cross Arm Tricep Extensions" target="Triceps/Long Head" has_lr="1" band_pos="2" />
+			<exercise name="Kickback Tricep Extensions" target="Triceps/Lateral Head" has_lr="0" band_pos="1" />
+			<exercise name="Kickback Tricep Extensions" target="Triceps/Lateral Head" has_lr="0" band_pos="4" />
+			<exercise name="Lying Tricep Extensions" target="Triceps" has_lr="0" band_pos="1" />
+			<exercise name="Overhead Extensions" target="Triceps/Long Head" has_lr="0" band_pos="4" />
+			<exercise name="Overhead Extensions" target="Triceps/Long Head" has_lr="0" band_pos="1" />
+			<exercise name="Reverse Grip Pressdowns" target="Triceps/Medial Head" has_lr="0" band_pos="3" />
+			<exercise name="Front Plank Tricep Pressdowns" target="Triceps/Abs" has_lr="1" band_pos="1" />
+			<exercise name="Side Plank Tricep Pressdowns" target="Triceps/Obliques" has_lr="1" band_pos="1" />
+			<exercise name="Reverse Wrist Pushups" target="Triceps/Shoulders" has_lr="0" band_pos="7" />
+			<exercise name="Diamond Pushups" target="Triceps" has_lr="0" band_pos="7" />
+			<exercise name="Bench Dips" target="Triceps/Long and Medial Head" has_lr="0" band_pos="0" />
+		</triceps>
+
+		<shoulders>
+			<exercise name="Shoulder Press" target="Mid Front Delts" has_lr="0" band_pos="4" />
+			<exercise name="Cross Body Shoulder Raise" target="Mid Front Delts" has_lr="1" band_pos="1" />
+			<exercise name="Front and Lateral Raise" target="Front Mid Delts" has_lr="0" band_pos="4" />
+			<exercise name="Upright Row" target="Traps" has_lr="0" band_pos="4" />
+			<exercise name="Rear Delt Lift" target="Rear Delts" has_lr="0" band_pos="4" />
+			<exercise name="Shoulder Shrugs" target="Traps" has_lr="0" band_pos="4" />
+			<exercise name="Rear Delt Fly" target="Rear Delts/Upper Back" has_lr="0" band_pos="2" />
+			<exercise name="Bent-Over Fly" target="Rear Delts/Upper Back" has_lr="0" band_pos="4" />
+			<exercise name="Front Raise" target="Front Delts" has_lr="0" band_pos="1" />
+			<exercise name="Front Raise" target="Front Delts" has_lr="0" band_pos="4" />
+			<exercise name="Lateral Raise" target="Mid Delts" has_lr="0" band_pos="1" />
+			<exercise name="Lateral Raise" target="Mid Delts" has_lr="0" band_pos="4" />
+			<exercise name="External Rotation" target="Rotator Cuff" has_lr="1" band_pos="9" />
+			<exercise name="Internal Rotation" target="Rotator Cuff" has_lr="1" band_pos="9" />
+			<exercise name="Side Plank Lateral Raise" target="Obliques" has_lr="1" band_pos="1" />
+			<exercise name="Pike Pushups" target="Traps" has_lr="0" band_pos="0" />
+			<exercise name="Elevated Pike Pushups" target="Traps" has_lr="0" band_pos="0" />
+			<exercise name="Reverse Plank Leans" target="Rear Delts" has_lr="0" band_pos="0" />
+		</shoulders>
+
+		<upper_back>
+			<exercise name="Wide Grip High Row" target="Lats/Upper Back" has_lr="0" band_pos="3" />
+			<exercise name="Narrow Grip High Row" target="Lats/Mid Back" has_lr="0" band_pos="3" />
+			<exercise name="Crank the Mower" target="Lats/Upper Back" has_lr="1" band_pos="1" />
+			<exercise name="Pull Apart" target="Lats/Upper Back" has_lr="0" band_pos="2" />
+			<exercise name="Bent Over Lat Pull" target="Lats" has_lr="0" band_pos="10" />
+			<exercise name="Alternating Bent Over Lat Pull" target="Lats" has_lr="0" band_pos="10" />
+			<exercise name="Lat Pulldowns" target="Lats" has_lr="0" band_pos="3" />
+			<exercise name="Scapula Pushups" target="Serratus Anterior/Scapula" has_lr="0" band_pos="0" />
+			<exercise name="Reachers" target="Serratus Anterior/Scapula" has_lr="0" band_pos="0" />
+		</upper_back>
+
+		<lower_back>
+			<exercise name="Reverse Snow Angels" target="Lower Back/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Back Extension" target="Lower Back/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Pulse Rows" target="Lower Back/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Superflies" target="Lower Back/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Good Mornings" target="Hamstrings/Lower Back" has_lr="0" band_pos="4" />
+			<exercise name="Hip Hinges" target="Lower Back" has_lr="0" band_pos="4" />
+			<exercise name="Deadlifts" target="Hamstrings/Glutes/Lower Back" has_lr="0" band_pos="4" />
+			<exercise name="Bird Dog" target="Lower Back/Abs" has_lr="1" band_pos="2" />
+			<exercise name="Bird Dog" target="Lower Back/Abs" has_lr="1" band_pos="8" />
+			<exercise name="Hand Plank Lat Pull" target="Lats/Abs" has_lr="1" band_pos="10" />
+			<exercise name="Superman Rock" target="Lower Back/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Seal Pushups" target="Lower Back" has_lr="0" band_pos="0" />
+			<exercise name="Close Grip Row" target="Lats/Mid Back" has_lr="0" band_pos="2" />
+		</lower_back>
+
+		<obliques>
+			<exercise name="Plank Twist" target="Abs/Obliques" has_lr="0" band_pos="0" />
+			<exercise name="Russian Twist" target="Obliques" has_lr="0" band_pos="0" />
+			<exercise name="Side Bends" target="Obliques" has_lr="1" band_pos="1" />
+			<exercise name="Side Bends" target="Obliques" has_lr="1" band_pos="4" />
+			<exercise name="Standing Side Crunches" target="Obliques" has_lr="1" band_pos="4" />
+			<exercise name="Alternating Side Crunches" target="Obliques" has_lr="0" band_pos="0" />
+			<exercise name="Overhead Side Bends" target="Obliques" has_lr="1" band_pos="2" />
+			<exercise name="Lifting" target="Obliques" has_lr="1" band_pos="1" />
+			<exercise name="Chopping" target="Obliques/Abs" has_lr="1" band_pos="3" />
+			<exercise name="Windshield Wipers" target="Obliques/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Helicopter Plank" target="Abs/Obliques" has_lr="1" band_pos="0" />
+			<exercise name="Side Plank Rock" target="Abs/Obliques" has_lr="1" band_pos="0" />
+			<exercise name="Side Plank Leg Lift" target="Abs/Obliques" has_lr="1" band_pos="0" />
+			<exercise name="Side Plank Hip Raises" target="Obliques/Abs" has_lr="1" band_pos="0" />
+			<exercise name="Star Crunches" target="Obliques/Abs" has_lr="1" band_pos="0" />
+			<exercise name="Alternating Star Crunches" target="Obliques/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Heel Taps" target="Obliques/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Squat Twist" target="Quads/Obliques" has_lr="1" band_pos="2" />
+			<exercise name="Alternating Squat Twist" target="Quads/Obliques" has_lr="0" band_pos="2" />
+			<exercise name="High Plank Knee to Elbow" target="Obliques" has_lr="0" band_pos="0" />
+		</obliques>
+
+		<abs>
+			<exercise name="Crunch" target="Upper Abs" has_lr="0" band_pos="1" />
+			<exercise name="V-Up Crunches" target="Abs" has_lr="0" band_pos="1" />
+			<exercise name="Plank Jacks" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="Spider Abs" target="Abs" has_lr="0" band_pos="1" />
+			<exercise name="Kneeling Crunch" target="Abs" has_lr="0" band_pos="3" />
+			<exercise name="Pallof Press" target="Abs" has_lr="0" band_pos="2" />
+			<exercise name="Plank Up &#38; Down" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="Plank Alternating Toe Taps" target="Obliques/Abs" has_lr="0" band_pos="0" />
+			<exercise name="Plank Toe Taps" target="Obliques/Abs" has_lr="1" band_pos="1" />
+			<exercise name="Toe Touches" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="Chair Sit Ups" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="Seated Scissors" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="Seated In and Out" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="Leg Raises" target="Lower Abs" has_lr="0" band_pos="0" />
+			<exercise name="Circle Leg Raises" target="Lower Abs" has_lr="0" band_pos="0" />
+			<exercise name="Flutter Kicks" target="Lower Abs" has_lr="0" band_pos="1" />
+			<exercise name="Tuck-ins" target="Lower Abs" has_lr="0" band_pos="1" />
+			<exercise name="Crucifix" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="Mountain Climbers" target="Abs" has_lr="0" band_pos="1" />
+			<exercise name="Climber Taps" target="Abs" has_lr="0" band_pos="1" />
+			<exercise name="Bicycle Crunch" target="Abs/Obliques" has_lr="0" band_pos="1" />
+			<exercise name="Toe Touch to Knee Drive Hold" target="Glutes/Hamstrings" has_lr="1" band_pos="0" />
+			<exercise name="Shoulder Taps" target="Core/Arms/Glutes/Wrists/Shoulders" has_lr="0" band_pos="0" />
+		</abs>
+
+		<cardio>
+			<exercise name="In and Out Burpees" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="In Out Open Close Burpees" target="Abs" has_lr="0" band_pos="0" />
+			<exercise name="Burpees" target="Glutes/Chest/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Jump Squats" target="Glutes/Hip Flexors/Quads" has_lr="0" band_pos="0" />
+			<exercise name="180° Jump Squats" target="Glutes/Hip Flexors/Quads" has_lr="0" band_pos="0" />
+			<exercise name="Star Jumps" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Lateral Jump Squats" target="Quads/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Jumping Jacks" target="Outer Quads/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Skater Hops" target="Legs/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Plyometric Lunges" target="Legs/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="High Knees" target="Knees/Abs/Glutes/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Double High Knees" target="Knees/Abs/Glutes/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Plank Step-ups" target="Abs" has_lr="0" band_pos="0" />
+		</cardio>
+
+		<glutes_hamstrings>
+			<exercise name="Glute Bridge Rock" target="Glutes" has_lr="0" band_pos="6" />
+			<exercise name="Single Leg Glute Bridges" target="Glutes" has_lr="1" band_pos="6" />
+			<exercise name="Glute Bridge March" target="Glutes" has_lr="0" band_pos="6" />
+			<exercise name="Pull Through Squats" target="Glutes" has_lr="0" band_pos="1" />
+			<exercise name="Alternating Pull Swing Squats" target="Glutes/Quads/Hamstrings" has_lr="0" band_pos="1" />
+			<exercise name="Squats" target="Glutes" has_lr="0" band_pos="4" />
+			<exercise name="Boxer Squats Punch" target="Glutes/Quads/Hip Flexors" has_lr="0" band_pos="4" />
+			<exercise name="Overhead Squats" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="4" />
+			<exercise name="Hack Squats" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="1" />
+			<exercise name="Squat Pulses" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Pistol Squats" target="Quads-Hamstrings-Glutes" has_lr="1" band_pos="0" />
+			<exercise name="Squat with Adduction Lift" target="Glutes/Abductors" has_lr="0" band_pos="0" />
+			<exercise name="Donkey Kicks" target="Glutes/Hamstrings" has_lr="1" band_pos="8" />
+			<exercise name="Fire Hydrants" target="Glutes/Hamstrings" has_lr="1" band_pos="8" />
+			<exercise name="Hamstring Glute Curls" target="Hamstrings/Glutes" has_lr="1" band_pos="1" />
+			<exercise name="Deadlifts" target="Hamstrings/Glutes/Lower Back" has_lr="0" band_pos="4" />
+			<exercise name="Deadlifts Upright Rows" target="Hamstrings/Glutes/Upper Back" has_lr="0" band_pos="4" />
+			<exercise name="Straight Leg Deadlifts" target="Hamstrings" has_lr="0" band_pos="3" />
+			<exercise name="Alternating Leg Back Deadlifts" target="Hamstrings" has_lr="0" band_pos="1" />
+			<exercise name="Single Leg Deadlifts" target="Hamstrings/Balance" has_lr="1" band_pos="4" />
+			<exercise name="Reverse Hamstring Curls" target="Hamstrings" has_lr="1" band_pos="1" />
+		</glutes_hamstrings>
+
+		<quads>
+			<exercise name="Squat Press" target="Quads-Shoulders-Hamstrings-Glutes" has_lr="0" band_pos="4" />
+			<exercise name="Squat Twist" target="Quads/Obliques" has_lr="1" band_pos="2" />
+			<exercise name="Narrow Squats" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="4" />
+			<exercise name="Narrow Split Squats" target="Quads-Hamstrings-Glutes" has_lr="1" band_pos="4" />
+			<exercise name="Split Squats" target="Quads-Hamstrings-Glutes" has_lr="1" band_pos="4" />
+			<exercise name="Wall Sit" target="Hamstrings/Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Alternating Reverse Lunges" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Reverse Lunges" target="Quads-Hamstrings-Glutes" has_lr="1" band_pos="4" />
+			<exercise name="Reverse Lunge Kickbacks" target="Quads-Hamstrings-Glutes" has_lr="1" band_pos="0" />
+			<exercise name="Alternating Reverse Lunge Kickbacks" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Static Lunges" target="Quads-Hamstrings-Glutes" has_lr="1" band_pos="4" />
+			<exercise name="Elevated Reverse Lunges" target="Quads-Hamstrings-Glutes" has_lr="1" band_pos="0" />
+			<exercise name="Bulgarian Split (Chair)" target="Quads-Hamstrings-Glutes" has_lr="1" band_pos="0" />
+			<exercise name="Lateral Lunges" target="Quads-Glutes" has_lr="1" band_pos="4" />
+			<exercise name="Alternating Lunge to High Knee" target="Quads-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Core Control Rear Lunges" target="Quads-Glutes-Shoulders-Core" has_lr="1" band_pos="4" />
+			<exercise name="Alternating Lateral Lunges" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Inchworm Pushups to Calf Press" target="Calves/Chest/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Sumo Squats" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="4" />
+			<exercise name="Frog Squats" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Sumo Pulse" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Sumo Jacks" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Cross Jacks" target="Glutes/Inner Thighs/Outer Thighs" has_lr="0" band_pos="0" />
+			<exercise name="Sumo Holds with Feet Arched" target="Quads-Hamstrings-Glutes" has_lr="0" band_pos="0" />
+			<exercise name="Side Lying Leg Lifts" target="Legs" has_lr="1" band_pos="0" />
+			<exercise name="Clamshells" target="Glutes/Quads/Hips" has_lr="1" band_pos="8" />
+		</quads>
+
+		<legs>
+			<exercise name="Smurf Jacks" target="Outer Quads/Knees/Flexibility" has_lr="0" band_pos="0" />
+			<exercise name="Fast Feet" target="Calves/Flexibility/General" has_lr="0" band_pos="0" />
+			<exercise name="Elevated Calf Raises" target="Calves" has_lr="0" band_pos="0" />
+			<exercise name="Single-Leg Leaning Calf Lift" target="Calves" has_lr="1" band_pos="2" />
+			<exercise name="Calf Raises" target="Calves" has_lr="0" band_pos="1" />
+			<exercise name="Ankle Lifts with back on wall" target="Shins-Ankles-Heels" has_lr="0" band_pos="0" />
+			<exercise name="Shrimp Squats" target="Toes-Ankles-Hamstrings-Glutes" has_lr="1" band_pos="0" />
+			<exercise name="Adductions" target="Adductors" has_lr="1" band_pos="1" />
+			<exercise name="Alternating Abductions" target="Adductors" has_lr="0" band_pos="4" />
+			<exercise name="Abductions" target="Adductors" has_lr="1" band_pos="4" />
+			<exercise name="Abductions" target="Adductors" has_lr="1" band_pos="1" />
+			<exercise name="Leg Extensions" target="Lower Legs" has_lr="1" band_pos="1" />
+		</legs>
+	</exercises>
+
+	<planks select="1">
+		<exercise name="Banana" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Boat" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Dead Bug" target="Abs" has_lr="1" band_pos="0" />
+		<exercise name="Lower Abs Plank" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Low Plank" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Bull Dog" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Superman Hold" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Reverse Plank" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="High Plank" target="Abs" has_lr="0" band_pos="7" />
+		<exercise name="Pushup Middle Hold Plank" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Pushup Bottom Hold Plank" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Bird Dog Plank" target="Abs" has_lr="1" band_pos="8" />
+		<exercise name="Glute Bridge Hold" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Bound Dog" target="Abs" has_lr="1" band_pos="0" />
+		<exercise name="Wall Push" target="Abs" has_lr="1" band_pos="0" />
+		<exercise name="Wall High Plank" target="Abs" has_lr="0" band_pos="0" />
+		<exercise name="Wall Low Plank" target="Abs" has_lr="0" band_pos="0" />
+	</planks>
+
+	<selection_rules>
+
+		<chest tabatas="3" rest_time="60" time_on="40" time_off="15">
+			<chest select="2" />
+			<upper_chest select="2" />
+			<lower_chest select="2" />
+			<triceps select="4" />
+		</chest>
+
+		<legs tabatas="3" rest_time="60" time_on="40" time_off="15">
+			<legs select="3" />
+			<glutes_hamstrings select="4" />
+			<quads select="3" />
+		</legs>
+
+		<shoulders tabatas="3" rest_time="60" time_on="40" time_off="15">
+			<shoulders select="8" />
+			<chest select="2" />
+		</shoulders>
+
+		<core tabatas="3" rest_time="60" time_on="40" time_off="15">
+			<obliques select="3" />
+			<abs select="4" />
+			<cardio select="3" />
+		</core>
+
+		<back tabatas="3" rest_time="60" time_on="40" time_off="15">
+			<upper_back select="3" />
+			<lower_back select="3" />
+			<biceps select="4" />
+		</back>
+
+		<full_body tabatas="2" rest_time="60" time_on="40" time_off="15">
+			<chest select="1" />
+			<upper_chest select="1" />
+			<lower_chest select="1" />
+			<biceps select="1" />
+			<triceps select="1" />
+			<shoulders select="1" />
+			<lower_back select="1" />
+			<upper_back select="1" />
+			<obliques select="1" />
+			<abs select="1" />
+			<cardio select="1" />
+			<glutes_hamstrings select="1" />
+			<quads select="1" />
+			<legs select="1" />
+		</full_body>
+
+		<chest_strength tabatas="4" rest_time="60" time_on="40" time_off="10">
+			<chest select="2" />
+			<upper_chest select="1" />
+			<lower_chest select="1" />
+			<triceps select="2" />
+		</chest_strength>
+
+		<legs_strength tabatas="4" rest_time="60" time_on="40" time_off="10">
+			<legs select="2" />
+			<glutes_hamstrings select="3" />
+			<quads select="2" />
+		</legs_strength>
+
+		<shoulders_strength tabatas="4" rest_time="60" time_on="40" time_off="10">
+			<shoulders select="6" />
+			<chest select="2" />
+		</shoulders_strength>
+
+		<core_strength tabatas="4" rest_time="60" time_on="35" time_off="10">
+			<obliques select="2" />
+			<abs select="3" />
+			<cardio select="2" />
+		</core_strength>
+
+		<back_strength tabatas="4" rest_time="60" time_on="40" time_off="10">
+			<upper_back select="3" />
+			<lower_back select="2" />
+			<biceps select="2" />
+		</back_strength>
+
+		<quick_full tabatas="3" rest_time="45" time_on="30" time_off="10">
+			<chest select="1" />
+			<triceps select="1" />
+			<obliques select="1" />
+			<abs select="1" />
+			<glutes_hamstrings select="1" />
+			<quads select="1" />
+			<legs select="1" />
+			<cardio select="1" />
+		</quick_full>
+
+		<quick_upper tabatas="3" rest_time="45" time_on="30" time_off="10">
+			<chest select="1" />
+			<upper_chest select="1" />
+			<lower_chest select="1" />
+			<biceps select="1" />
+			<triceps select="1" />
+			<shoulders select="1" />
+			<upper_back select="1" />
+		</quick_upper>
+
+		<quick_lower tabatas="3" rest_time="45" time_on="30" time_off="10">
+			<obliques select="1" />
+			<abs select="1" />
+			<glutes_hamstrings select="1" />
+			<quads select="2" />
+			<legs select="1" />
+			<lower_back select="1" />
+		</quick_lower>
+	</selection_rules>
+	
+	<band_legends>
+		<band_legend id="0" title="No Band" />
+		<band_legend id="1" title="Low" />
+		<band_legend id="2" title="Middle" />
+		<band_legend id="3" title="High" />
+		<band_legend id="4" title="Stand On Band" />
+		<band_legend id="5" title="Hip Level" />
+		<band_legend id="6" title="Band on Waist" />
+		<band_legend id="7" title="Band on Back" />
+		<band_legend id="8" title="Sit on/Hold Band" />
+		<band_legend id="9" title="Elbow Level" />
+		<band_legend id="10" title="Waist Level" />
+	</band_legends>
+</workout>

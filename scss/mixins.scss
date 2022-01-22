@@ -1,0 +1,110 @@
+@mixin tablet-screens {
+    @media screen and (min-width: 40.0rem) {
+        @content;
+    }
+}
+
+@mixin large-screens {
+    @media screen and (min-width: 80.0rem) {
+        @content;
+    }
+}
+
+@mixin border-box {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@mixin content-box {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
+@mixin fader ($start, $end) {
+    @keyframes fader {
+        0% {opacity: $start;}
+        100% {opacity: $end;} 
+    }
+}
+
+@mixin fadeInUp {
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, calc(var(--theme-font-size) * 2), 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
+@mixin rotator ($start, $end) {
+    @keyframes rotator{
+        from{transform:rotate($start)}
+        @content;
+        to{transform:rotate($end)}
+    }
+}
+
+@mixin spinner {
+    @keyframes spinner {
+        0% {
+            transform: rotate(0);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        50% {
+            transform: rotate(900deg);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        100% {
+            transform: rotate(1800deg);
+        }
+    }
+}
+
+@mixin bgFade ($start, $end) {
+    @keyframes bgFade {
+        0% {background-color: rgba($color: rgb(100 100 100), $alpha: $start);}
+        100% {background-color: rgba($color: rgb(100 100 100), $alpha: $end);}
+    }
+}
+
+@mixin light-shadow {
+    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px,
+                rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+}
+
+@mixin card-background {
+    box-shadow: rgb(0 0 0 / 15%) 0 1px 3px,
+                rgb(0 0 0 / 25%) 0 1px 2px;
+}
+
+@mixin bottom-border {
+    border-bottom: 0.1rem groove rgba(0, 0, 0, 0.3);
+}
+
+@mixin shadow-text {
+    text-shadow: 0.05rem 0.05rem 0 rgb(100 100 100 / 50%);
+}
+
+@mixin spread-map($map: ()) {
+    @each $key, $value in $map {
+        #{$key}: $value;
+    }
+}
+
+@function theme-var($key, $fallback: null, $map: $theme-map) {
+    @if not map-has-key($map, $key) {
+        @error "key: '#{$key}', is not a key in map: #{$map}";
+    }
+    @if ($fallback) {
+        @return var($key, $fallback);
+    } @else {
+        @return var($key);
+    }
+}
