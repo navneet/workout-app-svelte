@@ -30,19 +30,19 @@
                 break;
         }
     }
-    const canShare = () => 'share' in window.navigator && window.navigator.canShare();
+    const canShare = () => 'share' in navigator && navigator.canShare();
     const onShare = async () => {
         workout.save(true);
         const shareLink = {
             title: `Sweat ${$workout.meta.title} Workout`,
             text: 'Here\'s the link to your saved workout.',
-            url: `${window.location.origin}${$routineState.tabataLink}/?w=${$workout.meta.pathname}&`,
+            url: `${$page.url.origin}${$routineState.tabataLink}/?w=${$workout.meta.pathname}&`,
         };
         if (canShare()) {
             window.navigator.share(shareLink).catch(error => {
                 console.error(error);
             });
-        } else if(navigator.clipboard) {
+        } else if('clipboard' in navigator) {
             navigator.clipboard.writeText(shareLink.url).then(() => {
                 console.info('Show copied notification here');
             }).catch(error => {

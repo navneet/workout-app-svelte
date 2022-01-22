@@ -1,6 +1,6 @@
 const API = () => {
 
-    const saveWorkout = async ($workoutObj) => {
+    const saveWorkout = ($workoutObj) => {
         return new Promise(resolve => {
             const init = {
                 method: 'POST',
@@ -10,7 +10,7 @@ const API = () => {
             }
             let url = 'https://kalabaaz.pythonanywhere.com'
             url += '/api/workout/save';
-            fetch(url, init).then(response=>{
+            fetch(url, init).then(async response=>{
                 if (response.ok) resolve();
             }).catch(error=>{
                 console.error(error);

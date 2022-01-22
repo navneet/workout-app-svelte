@@ -51,10 +51,12 @@ const Workout = (preset=Preset()) => {
 
     const save = (toServer=false) => {
         update($gw => {
-            if (!$gw.meta.pathname)
-                $gw.meta.pathname = getRandomString(10);
+            if (toServer === true) {
+                if (!$gw.meta.pathname)
+                    $gw.meta.pathname = getRandomString(10);
+                API.saveWorkout($gw);
+            }
             LocalStore.setItem('workout', $gw);
-            if (toServer === true) API.saveWorkout($gw);
             return $gw;
         });
     }
