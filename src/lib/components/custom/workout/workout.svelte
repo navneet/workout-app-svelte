@@ -2,6 +2,7 @@
     import { createEventDispatcher } from 'svelte';
     import {page} from '$app/stores';
     import {secsToClock} from '$lib/cjs/helpers';
+    import AppStore from '$lib/stores/appStore';
     import workout from '$lib/stores/workout/workout';
     import {presets} from '$lib/stores/workout/presets';
     import ViewTitle from '$lib/components/generic/ViewTitle.svelte';
@@ -14,6 +15,7 @@
 
     let settingsOpen, dropdownOpen;
     const dispatch = createEventDispatcher();
+    const routineState = AppStore.routine;
 
     const click = event => {
         switch (event.currentTarget.dataset.action) {
@@ -28,13 +30,13 @@
                 break;
         }
     }
-    const canShare = () => 'share' in navigator && navigator.canShare();
+    const canShare = () => 'share' in window.navigator && window.navigator.canShare();
     const onShare = async () => {
         workout.save(true);
         const shareLink = {
             title: `Sweat ${$workout.meta.title} Workout`,
             text: 'Here\'s the link to your saved workout.',
-            url: `${$page.url.origin}/routine/tabata/?w=${$workout.meta.pathname}&`,
+            url: `${window.location.origin}${$routineState.tabataLink}/?w=${$workout.meta.pathname}&`,
         };
         if (canShare()) {
             window.navigator.share(shareLink).catch(error => {

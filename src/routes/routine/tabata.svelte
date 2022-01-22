@@ -27,6 +27,7 @@
 	import { onDestroy } from 'svelte';
 	import {goto} from '$app/navigation';
 	import {page} from '$app/stores';
+	import AppStore from '$lib/stores/appStore';
 	import { SessionStore, LocalStore } from '$lib/stores/storage';
 	import routine from '$lib/stores/routine';
 	import TabataSettingsForm from '$lib/components/custom/routine/tabataSettings.svelte';
@@ -35,11 +36,12 @@
 
 	let open;
 	let failed2Load = $page.url.searchParams.has('w') && queryWorkout === null;
+	const routineState = AppStore.routine;
 
 	if (queryWorkout) {
 		LocalStore.setItem('workout', queryWorkout);
-        SessionStore.setItem('routine', []);
-		goto('/routine/tabata', {replaceState:true});
+		SessionStore.setItem('routine', []);
+		goto($routineState.tabataLink, {replaceState:true});
 	} else if(!failed2Load) {
 		const sess_routine = SessionStore.getItem('routine');
 		if (sess_routine.length) {
@@ -48,7 +50,7 @@
 			const workout = LocalStore.getItem('workout');
 			if (workout) routine.setWorkout(workout);
 		}
-		onDestroy(()=>SessionStore.setItem('routine', $routine));
+		onDestroy(()=>SessionStore.setItem('routine', $routine))
 	}
 </script>
 

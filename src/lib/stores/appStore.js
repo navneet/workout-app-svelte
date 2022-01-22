@@ -6,7 +6,7 @@ const _AppStore = () => {
     const routine = writable(Object.preventExtensions({
         tabataLink: '/routine/tabata',
         timerLink: '/routine/timer',
-        currentLink: '/routine/tabata',
+        currentLink: null,
         stopTime: 0,
     }));
 

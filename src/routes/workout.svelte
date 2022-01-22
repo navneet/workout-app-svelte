@@ -19,14 +19,17 @@
 <script>
     export let xml;
     import {goto} from '$app/navigation';
+    import AppStore from '$lib/stores/appStore';
     import {SessionStore} from '$lib/stores/storage';
     import ViewTitle from '$lib/components/generic/ViewTitle.svelte';
     import WorkoutSettingsForm from '$lib/components/custom/workout/settingsForm.svelte';
     import Workout from '$lib/components/custom/workout/workout.svelte';
 
+    const routineState = AppStore.routine;
+
     const onGoWorkout = () => {
         SessionStore.setItem('routine', []);
-        goto('/routine/tabata');
+        goto($routineState.tabataLink);
     }
 
     if (xml) WorkoutDb.setDb(xml);
