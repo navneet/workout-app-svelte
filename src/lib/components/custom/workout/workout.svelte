@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    import {page} from '$app/stores';
     import {secsToClock} from '$lib/cjs/helpers';
     import workout from '$lib/stores/workout/workout';
     import {presets} from '$lib/stores/workout/presets';
@@ -29,18 +30,18 @@
     }
     const canShare = () => navigator.share && navigator.canShare();
     const onShare = async () => {
-        workout.save();
+        workout.save(true);
         const shareLink = {
-            title: 'Share Test',
-            text: 'Kalabaaz Workout',
-            url: window.location.domain
+            title: `Sweat ${$workout.meta.title} Workout`,
+            text: 'This the link to your saved workout.',
+            url: `${$page.url.host}/routine/tabata/${$workout.meta.pathname}`,
         };
         if (canShare()) {
             window.navigator.share(shareLink).catch(error => {
                 console.error(error);
             });
         } else if(navigator.clipboard) {
-            navigator.clipboard.writeText(shareLink.url).then(response => {
+            navigator.clipboard.writeText(shareLink.url).then(() => {
                 console.info('Show copied notification here');
             }).catch(error => {
                 console.error(error);
@@ -49,7 +50,7 @@
     }
 
     const onWorkout = () => {
-        workout.save();
+        workout.save(false);
         dispatch('workout');
     }
 
@@ -57,7 +58,7 @@
         return [
             {icon:'bi bi-bootstrap-reboot', title:'Reset', data:{'data-action':'reset'}},
             {component:PlayPauseToggleIcon, props:{}},
-            //{icon:`bi bi-${canShare() ? 'share-fill' : 'link'}`, title:'Share', data:{'data-action':'share'}},
+            {icon:`bi bi-${canShare() ? 'share-fill' : 'link'}`, title:'Share', data:{'data-action':'share'}},
             {icon:'bi bi-gear-wide-connected', title:'Timer Settings', data:{'data-action':'settings_open'}},
         ]
     }

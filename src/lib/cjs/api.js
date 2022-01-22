@@ -4,10 +4,12 @@ const API = () => {
         return new Promise(resolve => {
             const init = {
                 method: 'POST',
-                body: JSON.stringify($workoutObj)
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify($workoutObj),
+                credentials: 'include'
             }
-            let url = 'http://localhost:8000'
-            url = '/api/workout/save';
+            let url = 'https://kalabaaz.pythonanywhere.com'
+            url += '/api/workout/save';
             fetch(url, init).then(response=>{
                 if (response.ok) resolve();
             }).catch(error=>{

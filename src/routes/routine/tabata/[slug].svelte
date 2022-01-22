@@ -9,8 +9,8 @@
         return new Promise(async resolve => {
             if (!customFetch) customFetch = fetch;
             let result = null;
-            let url = 'http://127.0.0.1:8000';
-            url = `/api/routine/tabata/${slug}.json`;
+            let url = 'https://kalabaaz.pythonanywhere.com';
+            url += `/api/tabata/${slug}.json`;
             const response = await customFetch(url, {credentials: 'include'});
             if (response.ok)
                 result = await response.json();

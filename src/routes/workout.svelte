@@ -1,11 +1,14 @@
 <script context=module>
-    import {get} from 'svelte/store';
     import WorkoutDb from '$lib/stores/workout/db';
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({fetch}) {
         const props = {xml:null};
-        const db = get(WorkoutDb);
-        if (!db) {
+        let db_exists = false;
+        const dbsub = WorkoutDb.subscribe($WorkoutDb=>{
+            db_exists = $WorkoutDb !== null;
+        });
+        dbsub();
+        if (!db_exists) {
             const response = await fetch('/data/workout_list.xml');
             if (response.ok) props.xml = await response.text();
         }
