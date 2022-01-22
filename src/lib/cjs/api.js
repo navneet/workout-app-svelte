@@ -9,7 +9,7 @@ const API = () => {
                 credentials: 'include'
             }
             let url = 'https://kalabaaz.pythonanywhere.com'
-            url = '/api/workout/save';
+            url += '/api/workout/save';
             fetch(url, init).then(response=>{
                 if (response.ok) resolve();
             }).catch(error=>{

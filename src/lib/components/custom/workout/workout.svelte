@@ -28,13 +28,13 @@
                 break;
         }
     }
-    const canShare = () => navigator.share && navigator.canShare();
+    const canShare = () => 'share' in navigator && navigator.canShare();
     const onShare = async () => {
         workout.save(true);
         const shareLink = {
             title: `Sweat ${$workout.meta.title} Workout`,
-            text: 'This the link to your saved workout.',
-            url: `${$page.url.origin}/routine/tabata/${$workout.meta.pathname}`,
+            text: 'Here\'s the link to your saved workout.',
+            url: `${$page.url.origin}/routine/tabata/?w=${$workout.meta.pathname}&`,
         };
         if (canShare()) {
             window.navigator.share(shareLink).catch(error => {
