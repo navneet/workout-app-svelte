@@ -10,7 +10,7 @@
             if (!customFetch) customFetch = fetch;
             let result = null;
             let url = 'https://kalabaaz.pythonanywhere.com';
-            url += `/api/tabata/${slug}.json`;
+            url = `/api/tabata/${slug}.json`;
             const response = await customFetch(url, {credentials: 'include'});
             if (response.ok)
                 result = await response.json();
