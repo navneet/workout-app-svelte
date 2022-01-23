@@ -71,7 +71,7 @@ const _Voice = () => {
     }
 
     const clearPending = () => {
-        if (isSupported() && window.speechSynthesis.pending) {
+        if (isSupported() && (window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
             window.speechSynthesis.cancel();
         }
     }

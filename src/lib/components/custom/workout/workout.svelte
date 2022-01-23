@@ -1,8 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte';
-    import {page} from '$app/stores';
     import {secsToClock} from '$lib/cjs/helpers';
-    import AppStore from '$lib/stores/appStore';
     import workout from '$lib/stores/workout/workout';
     import {presets} from '$lib/stores/workout/presets';
     import ViewTitle from '$lib/components/generic/ViewTitle.svelte';
@@ -12,42 +10,19 @@
     import RoutineMain from "$lib/components/custom/routine/main.svelte";
     import IconButtonBar from '$lib/components/generic/iconButtonBar.svelte';
     import PlayPauseToggleIcon from '$lib/components/custom/music/playPauseToggleIcon.svelte';
+    import ShareButton from '$lib/components/custom/workout/shareButton.svelte';
 
     let settingsOpen, dropdownOpen;
     const dispatch = createEventDispatcher();
-    const routineState = AppStore.routine;
 
     const click = event => {
         switch (event.currentTarget.dataset.action) {
             case 'reset':
                 workout.preset = workout.preset;
                 break;
-            case 'share':
-                onShare();
-                break;
             case 'settings_open':
                 settingsOpen = true;
                 break;
-        }
-    }
-    const canShare = () => 'share' in navigator && navigator.canShare();
-    const onShare = async () => {
-        workout.save(true);
-        const shareLink = {
-            title: `Sweat ${$workout.meta.title} Workout`,
-            text: 'Here\'s the link to your saved workout.',
-            url: `${$page.url.origin}${$routineState.tabataLink}/?w=${$workout.meta.pathname}&`,
-        };
-        if (canShare()) {
-            window.navigator.share(shareLink).catch(error => {
-                console.error(error);
-            });
-        } else if('clipboard' in navigator) {
-            navigator.clipboard.writeText(shareLink.url).then(() => {
-                console.info('Show copied notification here');
-            }).catch(error => {
-                console.error(error);
-            })
         }
     }
 
@@ -60,7 +35,7 @@
         return [
             {icon:'bi bi-bootstrap-reboot', title:'Reset', data:{'data-action':'reset'}},
             {component:PlayPauseToggleIcon, props:{}},
-            {icon:`bi bi-${canShare() ? 'share-fill' : 'link'}`, title:'Share', data:{'data-action':'share'}},
+            {component:ShareButton, props:{}},
             {icon:'bi bi-gear-wide-connected', title:'Timer Settings', data:{'data-action':'settings_open'}},
         ]
     }

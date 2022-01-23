@@ -10,6 +10,7 @@
 	import TabataCounters from '$lib/components/custom/routine/tabataCounters.svelte';
     import IconButtonBar from '$lib/components/generic/iconButtonBar.svelte';
     import PlayPauseMusic from '$lib/components/custom/music/playPauseToggleIcon.svelte';
+    import ShareButton from '$lib/components/custom/workout/shareButton.svelte';
 	import RoutineScroller from '$lib/components/custom/routine/routineScroller.svelte';
 
 	let settingsOpen = false;
@@ -132,6 +133,7 @@
         return [
             {icon:'bi bi-bootstrap-reboot', title:'Reset', data:{'data-action':'reset'}},
             {component:PlayPauseMusic, props:{}},
+            {component:ShareButton, props:{}},
             {icon:'bi bi-gear-wide-connected', title:'Timer Settings', data:{'data-action':'settings_open'}},
         ];
     }
