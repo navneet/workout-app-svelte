@@ -2,7 +2,7 @@
     import AppStore from '$lib/stores/appStore';
     import Voice from '$lib/cjs/Voice';
     import routine from '$lib/stores/routine';
-    import {routineItemTypes, RoutineItem} from "$lib/stores/workout/types";
+    import {routineItemTypes, routine2exercise} from "$lib/stores/workout/types";
     import FormPanel from '$lib/components/generic/formPanel.svelte';
 
     const userSettings = AppStore.userSettings;
@@ -94,9 +94,7 @@
             
             case 'round':
                 const newCount = parseInt(event.currentTarget.value);
-                if (!isNaN(newCount) && newCount>0) {
-                    routine.update($routine => $routine.filter(item=>item.round <= newCount));
-                }
+                if (!isNaN(newCount) && newCount>0) _updateRounds(newCount);
                 break;
             
             case 'use_voice':
@@ -108,6 +106,23 @@
                 Voice.defaultVoice = $userSettings.preferred_voice;
                 break;
         }
+    }
+
+    const _updateRounds = tabatas => {
+        const workItems = $routine.filter(
+            item=>item.round === 1 && item.type === routineItemTypes.WORK);
+        const exercises = workItems.map(item => routine2exercise(item));
+        const prepItem = $routine.find(item => item.type === routineItemTypes.PREP);
+        const restItem = $routine.find(item => item.type === routineItemTypes.REST);
+        const breakItem = $routine.find(item => item.type === routineItemTypes.BREAK);
+        const psuedoMetaPreset = {
+            tabatas: tabatas,
+            prep_time: prepItem ?  prepItem.duration : 0,
+            time_on: workItems.length ?  workItems[0].duration : 0,
+            time_off: restItem ?  restItem.duration : 0,
+            rest_time: breakItem ?  breakItem.duration : 0,
+        }
+        routine.setWorkout({meta: psuedoMetaPreset, exercises:exercises})
     }
 </script>
 

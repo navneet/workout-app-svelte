@@ -34,4 +34,10 @@ const routineItemTypes = {
     WORK: 1
 };
 
-export {EXERCISE_TYPE, ExerciseObject, routineItemTypes, RoutineItem};
+const routine2exercise = routineItem => {
+    const exObj = ExerciseObject();
+    Object.keys(exObj).forEach(k=>exObj[k]=routineItem[k])
+    return exObj;
+}
+
+export {EXERCISE_TYPE, ExerciseObject, RoutineItem, routineItemTypes, routine2exercise};
