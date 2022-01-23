@@ -31,6 +31,7 @@
 @import 'scss/mixins';
 header {
     display: flex;
+    margin-bottom: calc(var(--theme-font-size)*.9);
     @include light-shadow;
     .spacer {
         flex: 1;
@@ -66,6 +67,7 @@ main {
 footer {
     display: flex;
     margin: auto;
+    justify-content: center;
     padding: calc(var(--theme-font-size) * 0.25);
     font-size: calc(var(--theme-font-size) * 0.9);
     text-transform: uppercase;
