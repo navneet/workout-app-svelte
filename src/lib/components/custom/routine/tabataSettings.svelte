@@ -2,7 +2,7 @@
     import AppStore from '$lib/stores/appStore';
     import Voice from '$lib/cjs/Voice';
     import routine from '$lib/stores/routine';
-    import {routineItemTypes} from "$lib/stores/workout/types";
+    import {routineItemTypes, RoutineItem} from "$lib/stores/workout/types";
     import FormPanel from '$lib/components/generic/formPanel.svelte';
 
     const userSettings = AppStore.userSettings;
@@ -39,6 +39,14 @@
                 name: 'BREAK',
                 value: breakItem ?  breakItem.duration : 0,
                 label: 'Break Time (seconds)',
+                type: 'number',
+            },
+
+            {
+                id: 'round',
+                name: 'round',
+                value: $routine.length ? $routine[$routine.length-1].round : 0,
+                label: 'Rounds',
                 type: 'number',
             },
 
@@ -81,6 +89,13 @@
                         });
                         return $routine;
                     });
+                }
+                break;
+            
+            case 'round':
+                const newCount = parseInt(event.currentTarget.value);
+                if (!isNaN(newCount) && newCount>0) {
+                    routine.update($routine => $routine.filter(item=>item.round <= newCount));
                 }
                 break;
             

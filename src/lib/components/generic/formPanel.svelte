@@ -50,7 +50,9 @@
 </div>
 
 <style lang=scss>
+
 @import 'scss/mixins';
+
 div.form-panel {
     @include card-background;
 }
