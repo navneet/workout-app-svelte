@@ -1,7 +1,7 @@
 <script>
     import {onDestroy} from 'svelte';
     import { tweened } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing';
+    import { cubicOut } from 'svelte/easing';
     import Voice from '$lib/cjs/Voice';
     import AppStore from '$lib/stores/appStore';
     import YoutubePlayer from '$lib/components/generic/YoutubePlayer.svelte';
