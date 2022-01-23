@@ -62,7 +62,7 @@
 </svelte:head>
 
 {#await readySessionRoutine()}
-	<Preloader />
+	<div class=center><Preloader /></div>
 {:then} 
 {#if $routine.length}
 	{#if open}
