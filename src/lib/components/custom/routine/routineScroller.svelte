@@ -74,7 +74,7 @@ ol {
 ol {
     li {
         //padding-bottom: var(--theme-font-size);
-        border-bottom: calc(var(--theme-gap-unit) * .1) ridge rgba(100, 100, 100, 0.5);
+        border-bottom: calc(var(--theme-gap-unit) * .1) dotted rgba(100, 100, 100, 0.5);
     }
 }
 

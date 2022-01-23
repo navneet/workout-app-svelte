@@ -115,14 +115,6 @@ button {
     }
 }
 
-/*Layout*/
-body {
-    @include tablet-screens {
-        display: flex;
-        flex-flow: column nowrap;
-    }
-}
-
 /**Custom Convinience Classes */
 .hide {display: none !important}
 .off {visibility: hidden !important}
