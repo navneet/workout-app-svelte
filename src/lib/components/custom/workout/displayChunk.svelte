@@ -17,7 +17,7 @@
             target={item.target}
             band_pos={item.band_pos}
             band_pos_text={item.band_pos_text}>
-            <IconButtonBar on:click on:dblclick on:mouseenter on:mouseleave buttons={typeof buttons === 'function' ? buttons(items, i) : buttons} />
+            <IconButtonBar on:click on:dblclick on:mouseenter on:mouseleave buttons={typeof buttons === 'function' ? buttons(item, i) : buttons} />
         </ExerciseCard>
     </li>
     {/each}

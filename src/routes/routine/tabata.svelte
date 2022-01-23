@@ -10,8 +10,9 @@
 
 	const loadQueryWorkout = () => {
 		return new Promise(async resolve => {
+			const pgURL = new URL(window.location.href);
 			let url = 'https://kalabaaz.pythonanywhere.com';
-			url += `/api/tabata/${$page.url.searchParams.get('w')}.json`;
+			url += `/api/tabata/${pgURL.searchParams.get('w')}.json`;
 			try {
 				const response = await fetch(url, {credentials: 'include'});
 				if (response.ok) {
@@ -27,9 +28,9 @@
 
 	const readySessionRoutine = () => {
 		return new Promise(async (resolve, reject) => {
-			if ($page.url.searchParams.has('w') && !resultLoaded) {
+			const pgURL = new URL(window.location.href);
+			if (pgURL.searchParams.has('w')) {
 				const result = await loadQueryWorkout();
-				resultLoaded = true;
 				if (result) {
 					LocalStore.setItem('workout', result);
 					SessionStore.setItem('routine', []);
@@ -53,7 +54,7 @@
 
 	onDestroy(()=>SessionStore.setItem('routine', $routine));
 
-	let open, resultLoaded;
+	let open;
 </script>
 
 <svelte:head>
