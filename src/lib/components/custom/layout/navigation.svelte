@@ -26,7 +26,7 @@
         ];
         menuItems = menuItems.map(item => {
             item.active = $page.url.pathname.match(item.href);
-            return item;
+            return Object.preventExtensions(item);
         });
     });
 

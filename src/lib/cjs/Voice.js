@@ -1,10 +1,10 @@
-const _Voice = () => {
+const Voice = () => {
     let _defaultVoice = null;
     let _utterance = null;
     let _activated = false;
 
     function activateOnClick(defaultVoice=null) {
-        if (!_activated) {
+        if (isSupported() && !_activated) {
             setDefaultVoice(defaultVoice);
             speak('ready', 0.0);
             _activated = true;
@@ -12,7 +12,7 @@ const _Voice = () => {
     }
     
     const isSupported = () => {
-        return 'speechSynthesis' in window;
+        return typeof window !== 'undefined' && 'speechSynthesis' in window;
     };
 
     async function getVoices(lang = null, asOptions = false) {
@@ -46,20 +46,18 @@ const _Voice = () => {
     }
 
     const speak = (text, volume=1.0, rate=1.0, pitch=1.0, voice=null) => {
-        if (isSupported()) {
-            //const utterance = new SpeechSynthesisUtterance();
-            const utterance = getUtterance();
-            utterance.text = text;
-            utterance.volume = volume;
-            utterance.rate = rate;
-            utterance.pitch = pitch;
-            if (!voice) voice = _defaultVoice;
-            if (voice) {
-                utterance.voice = voice;
-                utterance.lang = voice.lang;
-            }
-            window.speechSynthesis.speak(utterance);
+        const utterance = getUtterance();
+        if (!utterance) return;
+        utterance.text = text;
+        utterance.volume = volume;
+        utterance.rate = rate;
+        utterance.pitch = pitch;
+        if (!voice) voice = _defaultVoice;
+        if (voice) {
+            utterance.voice = voice;
+            utterance.lang = voice.lang;
         }
+        window.speechSynthesis.speak(utterance);
     }
 
     const getUtterance = () => {
@@ -71,7 +69,7 @@ const _Voice = () => {
     }
 
     const clearPending = () => {
-        if (isSupported() && (window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
+        if (isSupported() && window.speechSynthesis.pending) {
             window.speechSynthesis.cancel();
         }
     }
@@ -97,6 +95,4 @@ const _Voice = () => {
     }
 }
 
-const Voice = _Voice();
-
-export default Voice;
+export default Voice();

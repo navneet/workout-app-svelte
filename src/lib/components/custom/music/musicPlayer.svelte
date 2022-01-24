@@ -39,9 +39,11 @@
     const onUtterance = event => {
         switch (event.type) {
             case 'start':
+            case 'resume':
                 $musicFader = 1;
                 break;
             case 'end':
+            case 'pause':
                 $musicFader = 100;
                 break;
         }

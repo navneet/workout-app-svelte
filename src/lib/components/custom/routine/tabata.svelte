@@ -29,7 +29,7 @@
         const item = $routine[nextEx];
         let speech = `Next Exercise is ${item.display_name}\n`;
         if (item.band_pos > 0)
-            speech += `Band's Position: ${item.band_pos_text}`;
+            speech += `Band's Position: ${item.band_pos_text}\n`;
         return speech;
     }
 
@@ -65,20 +65,13 @@
                 switch(currentItem.type) {
                     case routineItemTypes.REST:
                         utterance += 'Rest\n';
+                        utterance += nextExerciseSpeech();
                         break;
                     case routineItemTypes.BREAK:
                         utterance += 'Break\n';
                         break;
                     case routineItemTypes.PREP:
                         utterance += 'Prep\n';
-                        break;
-                }
-                break;
-            
-            case 2:
-                switch(currentItem.type) {
-                    case routineItemTypes.REST:
-                    case routineItemTypes.PREP:
                         utterance += nextExerciseSpeech();
                         break;
                 }
@@ -96,9 +89,9 @@
                     utterance += 'Get Ready\n';
                     break;
             }
-		} else if (routine.isComplete()) {
-			utterance += 'Well done\n';
 		}
+
+        if (routine.isComplete()) utterance += 'Well done\n';
 
         if (utterance.length) Voice.speak(utterance);
     }

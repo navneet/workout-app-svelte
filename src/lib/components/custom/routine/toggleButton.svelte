@@ -26,7 +26,9 @@
 
     onDestroy(() => {if (timeKeeper && timeKeeper.isTicking()) timeKeeper.stop()});
     
-    export {timeKeeper, value, active, disabled, hide, click};
+    export {
+        timeKeeper, value, disabled, hide, click, active
+    };
 </script>
 
 
