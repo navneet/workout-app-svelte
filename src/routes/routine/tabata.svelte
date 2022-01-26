@@ -8,11 +8,10 @@
 	import TabataSettingsForm from '$lib/components/custom/routine/tabataSettings.svelte';
 	import Tabata from '$lib/components/custom/routine/tabata.svelte';
 
-	const loadQueryWorkout = () => {
+	const _loadQueryWorkout = () => {
 		return new Promise(async resolve => {
-			const pgURL = new URL(window.location.href);
 			let url = 'https://kalabaaz.pythonanywhere.com';
-			url += `/api/tabata/${pgURL.searchParams.get('w')}.json`;
+			url += `/api/tabata/${$page.url.searchParams.get('w')}.json`;
 			try {
 				const response = await fetch(url, {credentials: 'include'});
 				if (response.ok) {
@@ -28,16 +27,11 @@
 
 	const readySessionRoutine = () => {
 		return new Promise(async (resolve, reject) => {
-			const pgURL = new URL(window.location.href);
-			if (pgURL.searchParams.has('w')) {
-				const result = await loadQueryWorkout();
-				if (result) {
-					LocalStore.setItem('workout', result);
-					SessionStore.setItem('routine', []);
-				} else {
-					reject();
-					return;
-				}
+			if ('url' in $page && $page.url.searchParams.has('w')) {
+				const result = await _loadQueryWorkout();
+				if (!result) return reject();
+				LocalStore.setItem('workout', result);
+				SessionStore.setItem('routine', []);
 			}
 
 			const sess_routine = SessionStore.getItem('routine');
@@ -73,12 +67,12 @@
 {:else}
 	<CreateNewButton>
 		<h2 class=center>No Workout!</h2>
-		<p>You are in need of a workout.<br>Please create one.</p>
+		<p>You need of a workout.<br>Please create one.</p>
 	</CreateNewButton>
 {/if}
 {:catch}
 <CreateNewButton>
 	<h2 class='center error'>Workout not found!</h2>
-	<p>The workout you are looking for was not found.<br>Perhaps it has expired. Please create a new workout</p>
+	<p>The workout you are looking for was not found.<br>Perhaps it has expired. Please create a new one.</p>
 </CreateNewButton>
 {/await}
