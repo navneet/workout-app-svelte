@@ -1,19 +1,18 @@
 <script context=module>
     import WorkoutDb from '$lib/stores/workout/db';
-	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({fetch}) {
-        const props = {xml:null};
+    
+    /** @type {import('@sveltejs/kit').Load} */
+    export const load = async ({fetch}) => {
+        const props = {xml: null};
         let db_exists = false;
-        const dbsub = WorkoutDb.subscribe($WorkoutDb=>{
-            db_exists = $WorkoutDb !== null;
-        });
+        const dbsub = WorkoutDb.subscribe($db=> db_exists = $db !== null);
         dbsub();
         if (!db_exists) {
             const response = await fetch('/data/workout_list.xml');
             if (response.ok) props.xml = await response.text();
         }
-		return {props};
-	}
+        return {props};
+    }
 </script>
 
 <script>
