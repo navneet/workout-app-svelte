@@ -4,9 +4,9 @@
 	import Voice from '$lib/cjs/Voice';
 	import AppStore from '$lib/stores/appStore';
 	import routine from '$lib/stores/routine';
-	import { routineItemTypes } from "$lib/stores/workout/types";
+	import { routineItemTypes } from '$lib/stores/workout/types';
     import TimeKeeper from '$lib/stores/TimeKeeper';
-	import MainView from "$lib/components/custom/routine/main.svelte";
+	import MainView from '$lib/components/custom/routine/main.svelte';
 	import TabataCounters from '$lib/components/custom/routine/tabataCounters.svelte';
     import IconButtonBar from '$lib/components/generic/iconButtonBar.svelte';
     import PlayPauseMusic from '$lib/components/custom/music/playPauseToggleIcon.svelte';
@@ -42,7 +42,7 @@
 	});
 
     const speaker = ($remaining) => {
-        if (!$userSettings.use_voice || !timeKeeper.isTicking()) return;
+        if (!$userSettings.use_voice) return;
 		const cIndex = getCurrentIndex();
 		if (cIndex === -1) return;
 
@@ -55,8 +55,10 @@
                         utterance += 'Go\n';
                         break;
                     case routineItemTypes.REST:
+                        utterance += 'Stop\nRest\n';
+                        break;
                     case routineItemTypes.BREAK:
-                        utterance += 'Stop\n';
+                        utterance += 'Stop\nBreak\n';
                         break;
                 }
                 break;
@@ -64,11 +66,7 @@
             case 1:
                 switch(currentItem.type) {
                     case routineItemTypes.REST:
-                        utterance += 'Rest\n';
                         utterance += nextExerciseSpeech();
-                        break;
-                    case routineItemTypes.BREAK:
-                        utterance += 'Break\n';
                         break;
                     case routineItemTypes.PREP:
                         utterance += 'Prep\n';
