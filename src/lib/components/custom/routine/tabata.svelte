@@ -77,7 +77,11 @@
         }
 		
         if ($remaining < 4) {
-            utterance += `${$remaining}\n`;
+            if (routine.isComplete()) {
+                utterance += 'Well done\n';
+            } else if($remaining > 0) {
+                utterance += `${$remaining}\n`;
+            }
 		} else if (currentItem.type === routineItemTypes.BREAK) {
             switch ($remaining) {
                 case 14:
@@ -88,8 +92,6 @@
                     break;
             }
 		}
-
-        if (routine.isComplete()) utterance += 'Well done\n';
 
         if (utterance.length) Voice.speak(utterance);
     }
